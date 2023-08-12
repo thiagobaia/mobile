@@ -21,8 +21,8 @@ TucGo é o guia turístico definitivo da cidade de Tucurui-Pará ! Descubra os p
 
 **TucGo** é o seu companheiro perfeito para desfrutar ao máximo da cidade, seja você um morador local ou um turista. Desvende os tesouros ocultos, participe de eventos emocionantes e crie memórias inesquecíveis com a facilidade deste aplicativo completo e amigável. Baixe o TucGo agora e comece a sua jornada pela cidade!
 
-# Guia Tucurui
-Aplicação completa do Guia da Cidade.
+# TucGo
+Aplicação completa do Guia Turistico da Cidade de Tucuruí.
 
 
 ![App Screenshot](.github/cover.png)
