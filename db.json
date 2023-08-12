@@ -1,0 +1,198 @@
+{
+  "locais": [
+    {
+      "id": 1,
+      "name": "Banco do Brasil",
+      "phone": "(94) 4003-3001",
+      "adress": "Av. Raimundo Veridiano Cardoso, 42 - Bela Vista, Tucuruí - PA, 68456-760",
+      "maps": "https://goo.gl/maps/J7wcPkom3D7JNHBc9",
+      "icon": "https://10619-2.s.cdn12.com/rests/original/110_505213112.jpg",
+      "latitude": -3.767281860585409,
+      "latitudeDelta": 0.029805350237748218,
+      "longitude": -49.671259459448706,
+      "longitudeDelta": 0.03132384270429611,
+      "category": "Bancos"
+    },
+
+    {
+      "id": 2,
+      "name": "Posto 10",
+      "phone": "(94) 98807-6221",
+      "adress": "Br 422 , SN, Pátio do Posto Petromax Bela Vista - 68455-005 - Tucuruí/PA",
+      "maps": "https://goo.gl/maps/r5qYdiSLz4X38WHM9",
+      "icon": "https://10619-2.s.cdn12.com/rests/original/110_505213112.jpg",
+      "latitude": -3.767281860585409,
+      "latitudeDelta": 0.029805350237748218,
+      "longitude": -49.671259459448706,
+      "longitudeDelta": 0.03132384270429611,
+      "category": "Restaurante"
+    },
+
+    {
+      "id": 3,
+      "name": "CRT Hotel",
+      "phone": "(94) 98421-2477",
+      "adress": " Praça França, Tucuruí - PA, 68464-000",
+      "maps": "https://goo.gl/maps/o1XtBSpSaXSL1Gz6A",
+      "icon": "https://10619-2.s.cdn12.com/rests/original/110_505213112.jpg",
+      "latitude": -3.8344166997835645,
+      "latitudeDelta": 0.029805350237748218,
+      "longitude": -49.684707290128785,
+      "longitudeDelta": 0.03132384270429611,
+      "category": "Hoteis"
+    }
+  ]
+}
+
+
+
+
+
+
+
+// const dataLocal = [
+//   {
+//     id: 1,
+//     name: "Banco do Brasil",
+//     phone: "(94) 4003-3001",
+//     adress:
+//       "Av. Raimundo Veridiano Cardoso, 42 - Bela Vista, Tucuruí - PA, 68456-760",
+//     maps: "https://goo.gl/maps/J7wcPkom3D7JNHBc9",
+//     icon: "https://10619-2.s.cdn12.com/rests/original/110_505213112.jpg",
+//     latitude: -3.767281860585409,
+//     latitudeDelta: 0.029805350237748218,
+//     longitude: -49.671259459448706,
+//     longitudeDelta: 0.03132384270429611,
+//     category: "Bancos",
+//   },
+//   {
+//     id: 10,
+//     name: "Banco da Amazonia",
+//     phone: "(94) 4003-3001",
+//     adress:
+//       "Av. Raimundo Veridiano Cardoso, 42 - Bela Vista, Tucuruí - PA, 68456-760",
+//     maps: "https://goo.gl/maps/J7wcPkom3D7JNHBc9",
+//     icon: "https://10619-2.s.cdn12.com/rests/original/110_505213112.jpg",
+//     latitude: -3.767281860585409,
+//     latitudeDelta: 0.029805350237748218,
+//     longitude: -49.671259459448706,
+//     longitudeDelta: 0.03132384270429611,
+//     category: "Bancos",
+//   },
+
+//   {
+//     id: 2,
+//     name: "Posto 10",
+//     phone: "(94) 98807-6221",
+//     adress:
+//       "Br 422 , SN, Pátio do Posto Petromax Bela Vista - 68455-005 - Tucuruí/PA",
+//     maps: "https://goo.gl/maps/r5qYdiSLz4X38WHM9",
+//     icon: "https://10619-2.s.cdn12.com/rests/original/110_505213112.jpg",
+//     latitude: -3.767281860585409,
+//     latitudeDelta: 0.029805350237748218,
+//     longitude: -49.671259459448706,
+//     longitudeDelta: 0.03132384270429611,
+//     category: "Restaurantes",
+//   },
+
+//   {
+//     id: 3,
+//     name: "CRT Hotel",
+//     phone: "(94) 98421-2477",
+//     adress: " Praça França, Tucuruí - PA, 68464-000",
+//     maps: "https://goo.gl/maps/o1XtBSpSaXSL1Gz6A",
+//     icon: "https://10619-2.s.cdn12.com/rests/original/110_505213112.jpg",
+//     latitude: -3.8344166997835645,
+//     latitudeDelta: 0.029805350237748218,
+//     longitude: -49.684707290128785,
+//     longitudeDelta: 0.03132384270429611,
+//     category: "Hoteis",
+//   },
+
+//   {
+//     id: 4,
+//     name: "Drogasil",
+//     phone: "(94) 99268-5641",
+//     adress:
+//       "Address: R. Lauro Sodré, 663 - Santa Isabel, Tucuruí - PA, 68458-415",
+//     maps: "https://goo.gl/maps/HHVn8rTmE4SwShuu6",
+//     icon: "https://10619-2.s.cdn12.com/rests/original/110_505213112.jpg",
+//     latitude: -3.766156947118141,
+//     latitudeDelta: 0.029805350237748218,
+//     longitude: -49.67337190000001,
+//     longitudeDelta: 0.03132384270429611,
+//     category: "Farmacias",
+//   },
+
+//   {
+//     id: 5,
+//     name: "Paranhos Beach Tennis",
+//     phone: "(91)98090-0621",
+//     adress: "Av. Raul Garcia Llano, Tucuruí - PA, 68455-663",
+//     maps: "https://goo.gl/maps/Z6Qn6tQMT6kZXeTS7",
+//     icon: "https://10619-2.s.cdn12.com/rests/original/110_505213112.jpg",
+//     latitude: -3.8368488263270697,
+//     latitudeDelta: 0.029805350237748218,
+//     longitude: -49.67801585397918,
+//     longitudeDelta: 0.03132384270429611,
+//     category: "Beach Tennis",
+//   },
+
+//   {
+//     id: 6,
+//     name: "Mix Atacrejo",
+//     phone: "(98) 2108-3500",
+//     adress: "R. B, 423 - Galpão 01 - Jardim Paraiso, Tucuruí - PA, 68458-100",
+//     maps: "https://goo.gl/maps/14V8r4xY2Bk8H7Qh7",
+//     icon: "https://10619-2.s.cdn12.com/rests/original/110_505213112.jpg",
+//     latitude: -3.7548405033513514,
+//     latitudeDelta: 0.029805350237748218,
+//     longitude: -49.67023976099686,
+//     longitudeDelta: 0.03132384270429611,
+//     category: "Supermercados",
+//   },
+
+//   {
+//     id: 7,
+//     name: "Super Burger",
+//     phone: "(94)98145-5816",
+//     adress: "R. Tapajos, 15, Tucuruí - PA, 68455-737",
+//     maps: "https://goo.gl/maps/kxWk8LRYWXUHSsdk8",
+//     icon: "https://10619-2.s.cdn12.com/rests/original/110_505213112.jpg",
+//     latitude: -3.8311660989730174,
+//     latitudeDelta: 0.029805350237748218,
+//     longitude: -49.672275132458616,
+//     longitudeDelta: 0.03132384270429611,
+//     category: "Hamburgerias",
+//   },
+
+//   {
+//     id: 8,
+//     name: "Academia Esparta",
+//     phone: "(94)98105-6647",
+//     adress:
+//       "Próximo ao viaduto - Av. Brasília, 366 - Bela Vista, Tucuruí - PA, 68476-760",
+//     maps: "https://goo.gl/maps/X5Ayi4J11BjtAMSM8",
+//     icon: "https://10619-2.s.cdn12.com/rests/original/110_505213112.jpg",
+//     latitude: -3.770717696410136,
+//     latitudeDelta: 0.029805350237748218,
+//     longitude: -49.67380583863891,
+//     longitudeDelta: 0.03132384270429611,
+//     category: "Academias",
+//   },
+
+//   {
+//     id: 9,
+//     name: "Hospital Regional de Tucuruí",
+//     phone: "(94)3778-1717",
+//     adress:
+//       "Av. Dos Amazônidas, s/n - Vila Permanente, Tucuruí - PA, 68455-464",
+//     maps: "https://goo.gl/maps/RJBkqPyrwuRt78RB9",
+//     icon: "https://10619-2.s.cdn12.com/rests/original/110_505213112.jpg",
+//     latitude: -3.8283240238191025,
+//     latitudeDelta: 0.029805350237748218,
+//     longitude: -49.673566142409555,
+//     longitudeDelta: 0.03132384270429611,
+//     category: "Hospitais",
+//   },
+// ];
