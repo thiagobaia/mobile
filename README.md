@@ -26,114 +26,28 @@ TucGo é o guia turístico definitivo da cidade de Tucurui-Pará ! Descubra os p
 
 
 
+# Guia Tucurui
+Aplicação completa do Guia da Cidade.
+
+
+![App Screenshot](.github/cover.png)
 
 
 
-[//]: # (![image]&#40;https://user-images.githubusercontent.com/3481514/145904252-92e3dc1e-591f-410f-88a1-b4250f4ba6f2.png&#41;)
+Execute o App:
 
-[//]: # ()
-[//]: # (# getting started)
+```bash
+yarn expo start --clear
+```
+## Stack
 
-[//]: # ()
-[//]: # (```sh)
+- React Native
+- Typescript
+- Storybook
+- Expo Bare Workflow
+- Cache Image
+- Offline first
+- Strapi as backend
 
-[//]: # (npx create-expo-app --template expo-template-storybook AwesomeStorybook)
 
-[//]: # (```)
 
-[//]: # ()
-[//]: # (or)
-
-[//]: # ()
-[//]: # (```sh)
-
-[//]: # (yarn create expo-app --template expo-template-storybook AwesomeStorybook)
-
-[//]: # (```)
-
-[//]: # ()
-[//]: # (# app)
-
-[//]: # ()
-[//]: # ()
-[//]: # (```sh)
-
-[//]: # (yarn start)
-
-[//]: # (```)
-
-[//]: # ()
-[//]: # (# Ondevice    )
-
-[//]: # ()
-[//]: # (In this template you can now run `yarn storybook` to start ondevice storybook or `yarn start` to start your expo app.)
-
-[//]: # (This works via env variables and expo constants.)
-
-[//]: # ()
-[//]: # (```sh)
-
-[//]: # (# either)
-
-[//]: # (yarn storybook)
-
-[//]: # ()
-[//]: # (# ios)
-
-[//]: # (yarn storybook:ios)
-
-[//]: # ()
-[//]: # (# android)
-
-[//]: # (yarn storybook:android)
-
-[//]: # (```)
-
-[//]: # ()
-[//]: # (If you add new stories on the native &#40;ondevice version&#41; you either need to have the watcher running or run the stories loader)
-
-[//]: # ()
-[//]: # (To update the stories one time)
-
-[//]: # ()
-[//]: # (```sh)
-
-[//]: # (yarn storybook-generate)
-
-[//]: # (```)
-
-[//]: # ()
-[//]: # (To watch the stories files)
-
-[//]: # ()
-[//]: # (```sh)
-
-[//]: # (yarn storybook-watch)
-
-[//]: # (```)
-
-[//]: # ()
-[//]: # (Note that this is only necessary for when you add or remove a story file.)
-
-[//]: # ()
-[//]: # (# Web)
-
-[//]: # ()
-[//]: # (Start react native web storybook:)
-
-[//]: # ()
-[//]: # (```)
-
-[//]: # (yarn storybook:web)
-
-[//]: # (```)
-
-[//]: # ()
-[//]: # (build react native web storybook:)
-
-[//]: # ()
-[//]: # (```sh)
-
-[//]: # (yarn build-storybook)
-
-[//]: # (```)
