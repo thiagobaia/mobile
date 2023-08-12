@@ -32,11 +32,9 @@ export const Attractions = () => {
       const responseAvaliacao = await axios.get(
         "https://maps.googleapis.com/maps/api/place/details/json?place_id=" +
           `${placeId}` +
-          "&fields=name%2Crating&key=AIzaSyCOtbhY5ghwlQz8Nj500BdGE4fyIC53bL8"
+          `&fields=name%2Crating&key=${process.env.API_PLACE}`
       );
       setAvaliacao(responseAvaliacao.data.result.rating);
-
- 
     } catch (error) {
       console.log(error);
     } finally {
@@ -89,9 +87,7 @@ export const Attractions = () => {
           >
             {loading ? <Load /> : <Assessment note={avaliacao} />}
 
-      
-              <Tag>{category.name}</Tag>
-            
+            <Tag>{category.name}</Tag>
           </View>
           <TextTitle>Descrição:</TextTitle>
           <ContainerContent>
