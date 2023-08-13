@@ -1,66 +1,50 @@
 import { ScrollView } from "react-native";
 import { BackgroundTop, ContainerHome } from "./styles";
 import { SliderPartners } from "../../../src/components/SliderPartners";
-import { DataPartners } from "../../model/interfaces";
 import { SliderSection } from "../../../src/components/SliderSection";
 import { View } from "react-native";
 import { theme } from "../../styles/theme";
-import { ListAttractionsData } from "../../mocks/DataMocks.mock";
 import { Weather } from "../../components/Elements/Weather/Weather";
 
-
-export const ListPartners: DataPartners[] = [
-  {
-    id: 1,
-    partners: "Abs Distribuidora",
-    photo:
-      "uploads/2023-07-02T04:08:33.875ZGusttavo Lima.png",
-  },
-  {
-    id: 2,
-    partners: "BR Food",
-    photo:
-      "uploads/2023-07-02T04:08:33.875ZGusttavo Lima.png",
-  },
-  {
-    id: 3,
-    partners: "Supermercado Supernorte",
-    photo:
-      "uploads/2023-07-02T04:08:33.875ZGusttavo Lima.png",
-  },
-];
+import { useAttractions } from "../../hooks/AttractionsContext";
+import { useEvent } from "../../hooks/EventsContext";
+import { useSponsors } from "../../hooks/SponsorsContext";
 
 export const Home = () => {
+  const { attractions } = useAttractions();
+  const { events } = useEvent();
+  const { sponsors } = useSponsors();
+
   return (
     <View style={{ backgroundColor: `${theme.colors.shape}` }}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <BackgroundTop source={require("../../../assets/UHT.png")}>
-          <Weather/>
+          <Weather />
         </BackgroundTop>
 
         <ContainerHome>
           <SliderPartners
             title="Parceiros"
             seeall="Ver Mais"
-            data={ListPartners}
+            data={sponsors}
             routeScreen={"Parceiros"}
           />
           <SliderSection
             title="Em Destaque"
             seeall="Ver todos"
-            dataCardSliderItem={ListAttractionsData}
+            dataCardSliderItem={events}
             routeScreen={"Em Destaque"}
           />
           <SliderSection
             title="Eventos"
             seeall="Ver todos"
-            dataCardSliderItem={ListAttractionsData}
+            dataCardSliderItem={events}
             routeScreen={"Eventos"}
           />
           <SliderSection
             title="Pontos Turísticos"
             seeall="Ver todos"
-            dataCardSliderItem={ListAttractionsData}
+            dataCardSliderItem={attractions}
             routeScreen={"P.Turisticos"}
           />
         </ContainerHome>

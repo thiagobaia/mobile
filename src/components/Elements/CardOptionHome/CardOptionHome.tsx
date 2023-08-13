@@ -16,6 +16,7 @@ export interface CardOptionHomeModel {
   id?: number;
   name: string;
   city: string;
+  place: string;
   photo: any;
   routeScreen?: any;
   dataItem?: any;
@@ -25,6 +26,7 @@ export interface CardOptionHomeModel {
 export const CardOptionHome = ({
   photo,
   name,
+  place,
   city,
   routeScreen,
   dataItem,
@@ -49,7 +51,9 @@ export const CardOptionHome = ({
       </ContainerPhoto>
 
       <ContainerTitle>
-        <Text>{name}</Text>
+
+        {name ? <Text>{name}</Text> : <Text>{place}</Text>}
+        
       </ContainerTitle>
 
       <ContainerInfo>

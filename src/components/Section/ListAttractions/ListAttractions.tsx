@@ -1,39 +1,32 @@
 import { FlashList } from "@shopify/flash-list";
 import { Container, Title } from "./styles";
 import { useEffect, useState } from "react";
-import { api } from "../../../services/api";
+
 import { Load } from "../../Elements/Load/Load";
 import { SearchInput } from "../../Elements/SearchInput/SearchInput";
 import { EmptyError } from "../../Elements/EmptyError/EmptyError";
 import { CardLocalList } from "../../Elements/CardLocalList/CardLocalList";
+import { useAttractions } from "../../../hooks/AttractionsContext";
+
+interface IAttractions {
+  id: number;
+  place: string;
+  placeId:string;
+  city: string;
+  description: string;
+  facebook: string;
+  instagram: string;
+  whatsapp: string;
+  maps: string;
+  image:any;
+  galery: any;
+  category:string;
+}
+
 
 export const ListAttractions: React.FC = () => {
-  const [loading, setLoading] = useState(true);
-  const [initialData, setInitialData] = useState<any[]>([]);
-  const [originalData, setOriginalData] = useState([]);
+  const { attractions, loading, getSearch } = useAttractions();
 
-  async function getAttractions() {
-    try {
-      const response = await api.get("/attractions");
-      setInitialData(response.data);
-      setOriginalData(response.data);
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  function getSearch(searchText: any) {
-    let arr = JSON.parse(JSON.stringify(originalData));
-    setInitialData(
-      arr.filter((d: any) => d.place.toLowerCase().includes(searchText))
-    );
-  }
-
-  useEffect(() => {
-    getAttractions();
-  }, []);
   return (
     <Container>
       <Title>Pontos Turisticos</Title>
@@ -46,14 +39,14 @@ export const ListAttractions: React.FC = () => {
       ) : (
         <FlashList
           numColumns={1}
-          data={initialData}
+          data={attractions}
           showsVerticalScrollIndicator={false}
           ListEmptyComponent={
             <EmptyError componentName={"Pontos Turisticos"} />
           }
-          renderItem={({ item }: any) => (
+          renderItem={({ item }: { item: IAttractions }) => (
             <CardLocalList
-              key={item.attractionId}
+              key={item.id}
               name={item.place}
               photo={`${process.env.API_URL}${item.image.url}`}
               description={item.description}

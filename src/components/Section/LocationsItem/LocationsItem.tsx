@@ -8,30 +8,34 @@ import { OpitonSection } from "../../../utils/opitionIcon";
 import { FlashList } from "@shopify/flash-list";
 import { Load } from "../../Elements/Load/Load";
 import { EmptyError } from "../../Elements/EmptyError/EmptyError";
+import { useLocal } from "../../../hooks/LocalContext";
+
+interface ILocal {
+  id: number;
+  name: string;
+  phone: string;
+  adress: string;
+  maps: string;
+  icon: any;
+  latitude: number;
+  latitudeDelta: number;
+  longitude: number;
+  longitudeDelta: number;
+  category: {
+    name: string;
+  };
+}
 
 export const LocationsItem: React.FC = () => {
-  const [loading, setLoading] = useState(true);
-  const [data, setData] = useState<any[]>([]);
   const [option, setOption] = useState<any>("");
 
   const route = useRoute();
   const { name }: any = route.params;
 
-  const dataLocal = data.filter((item) => item.category.name === option);
-
-  async function getLocation() {
-    try {
-      const {data} = await api.get("/locals");
-      setData(data);
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setLoading(false);
-    }
-  }
+  const { loading, local } = useLocal();
+  const dataLocal = local.filter((item) => item.category.name === option);
 
   useEffect(() => {
-    getLocation();
     setOption(OpitonSection(name));
   }, []);
 
@@ -48,7 +52,7 @@ export const LocationsItem: React.FC = () => {
             data={dataLocal}
             showsVerticalScrollIndicator={false}
             ListEmptyComponent={<EmptyError componentName={option} />}
-            renderItem={({ item }: { item: any }) => (
+            renderItem={({ item }: { item: ILocal }) => (
               <CardLocals
                 key={item.id}
                 url={`${process.env.API_URL}${item.icon.url}`}

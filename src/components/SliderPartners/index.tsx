@@ -5,12 +5,24 @@ import {
   Text2,
   Titlelider,
 } from "./style";
-import { PropsPartners } from "../../model/interfaces";
 
 import { View } from "react-native";
 import Swiper from "react-native-swiper";
 import { CardSliderPartnersItem } from "../Elements/CardSliderPartnersItem/CardSliderPartnersItem";
 import { useNavigation } from "@react-navigation/native";
+
+interface DataPartners {
+  id?: number;
+  partners?: string;
+  image: any;
+}
+
+export interface PropsPartners {
+  data: DataPartners[];
+  title: string;
+  seeall: string;
+  routeScreen: any;
+}
 
 export const SliderPartners = ({
   data,
@@ -26,7 +38,7 @@ export const SliderPartners = ({
     <ContainerSlider>
       <Titlelider>
         <Text1>{title}</Text1>
-        <Text2 onPress={openScreen}>{seeall}</Text2>
+        {/* <Text2 onPress={openScreen}>{seeall}</Text2> */}
       </Titlelider>
 
       <ContainerSwiper>
@@ -50,11 +62,11 @@ export const SliderPartners = ({
             />
           }
         >
-          {data.map((item) => {
+          {data.map((item: DataPartners) => {
             return (
               <CardSliderPartnersItem
                 key={item.id}
-                photo={`${process.env.API_URL}/${item.photo}`}
+                image={`${process.env.API_URL}${item.image.url}`}
                 partners={item.partners}
               />
             );

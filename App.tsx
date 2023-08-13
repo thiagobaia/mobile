@@ -1,6 +1,7 @@
 import * as React from "react";
 import { StatusBar } from "react-native";
 import { ThemeProvider } from "styled-components";
+import { AppProvider } from "./src/hooks/index";
 import * as SplashScreen from "expo-splash-screen";
 
 import {
@@ -41,11 +42,13 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <StatusBar
-        backgroundColor={theme.colors.primary}
-        barStyle={"light-content"}
-      />
-      <AppRoutes />
+      <AppProvider>
+        <StatusBar
+          backgroundColor={theme.colors.primary}
+          barStyle={"light-content"}
+        />
+        <AppRoutes />
+      </AppProvider>
     </ThemeProvider>
   );
 }

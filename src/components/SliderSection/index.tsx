@@ -1,6 +1,5 @@
 import { TabActions, useNavigation } from "@react-navigation/native";
 import { CardOptionHome } from "../Elements/CardOptionHome/CardOptionHome";
-import { CardOptionHomeModel } from "../Elements/CardOptionHome/CardOptionHome";
 
 import {
   ContainerSlider,
@@ -11,7 +10,7 @@ import {
 } from "./styles";
 
 export interface SliderSectionModel {
-  dataCardSliderItem: CardOptionHomeModel[];
+  dataCardSliderItem: any[];
   title: string;
   seeall: string;
   routeScreen: any;
@@ -45,7 +44,8 @@ export const SliderSection = ({
             <CardOptionHome
               routeScreen={routeScreen}
               key={item.id}
-              photo={item.photo}
+              photo={`${process.env.API_URL}${item.image.url}`}
+              place={item.place}
               name={item.name}
               city={item.city}
             />

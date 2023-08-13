@@ -1,12 +1,18 @@
 import React from "react";
 
 import { Container, Image } from "./styles";
-import { DataPartners } from "../../../model/interfaces";
 
-export function CardSliderPartnersItem({ photo }: DataPartners) {
+
+interface DataPartners {
+  id?: number;
+  partners?: string;
+  image?: any;
+}
+
+export function CardSliderPartnersItem({ image }: DataPartners) {
   return (
     <Container>
-      <Image source={{ uri: photo }} />
+      <Image source={{ uri: `${image}` }}/>
     </Container>
   );
 }
