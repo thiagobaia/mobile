@@ -10,7 +10,7 @@ export const Container = styled.View`
   padding: 0px 20px;
   max-height: 50px;
   border-radius: 8px;
-  margin: 30px 0px;
+  margin: 15px 0px;
   background: ${theme.colors.shape};
   border: rgba(0, 0, 0, 0.73) solid 0.5px;
 `;

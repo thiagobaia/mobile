@@ -19,7 +19,7 @@ export const Home = () => {
     <View style={{ backgroundColor: `${theme.colors.shape}` }}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <BackgroundTop source={require("../../../assets/UHT.png")}>
-          <Weather />
+          {/* <Weather /> */}
         </BackgroundTop>
 
         <ContainerHome>

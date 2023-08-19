@@ -1,7 +1,5 @@
 import { FlashList } from "@shopify/flash-list";
 import { Container, Title } from "./styles";
-import { useEffect, useState } from "react";
-
 import { Load } from "../../Elements/Load/Load";
 import { SearchInput } from "../../Elements/SearchInput/SearchInput";
 import { EmptyError } from "../../Elements/EmptyError/EmptyError";

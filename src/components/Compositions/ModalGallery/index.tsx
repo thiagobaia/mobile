@@ -62,7 +62,7 @@ export const ModalGallery = ({ photoGallery }: ModalGalleryTypes) => {
                 {photoGallery.map((item: any) => {
                   return (
                     <CardSliderPartnersItem
-                      photo={`${process.env.API_URL}${item.url}`}
+                      image={`${process.env.API_URL}${item.url}`}
                       key={item.id}
                     />
                   );

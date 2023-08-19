@@ -31,26 +31,37 @@ interface EventsContextData {
   originalData: IEvent[];
   loading: boolean;
   getSearch: (searchText: string) => void;
+  loadMoreItem: () => void;
 }
 
 const EventContext = createContext<EventsContextData>({} as EventsContextData);
 
 export const EventProvider = ({ children }: EventProviderProps) => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [originalData, setOriginalData] = useState<IEvent[]>([]);
   const [initialData, setInitialData] = useState<IEvent[]>([]);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const start = +currentPage === 1 ? 0 : (+currentPage - 1) * 5;
 
   async function getEvents() {
     try {
-      const response = await api.get("/events");
-      setInitialData(response.data);
-      setOriginalData(response.data);
+      setLoading(true);
+      const response = await api.get(`/events?_limit=5&_start=${start}`);
+      if (response.data) {
+        setInitialData([...initialData, ...response.data]);
+        setOriginalData([...originalData, ...response.data]);
+      }
     } catch (error) {
       console.log(error);
     } finally {
       setLoading(false);
     }
   }
+
+  const loadMoreItem = () => {
+    setCurrentPage(currentPage + 1);
+  };
 
   function getSearch(searchText: string) {
     let arr = JSON.parse(JSON.stringify(originalData));
@@ -61,7 +72,7 @@ export const EventProvider = ({ children }: EventProviderProps) => {
 
   useEffect(() => {
     getEvents();
-  }, []);
+  }, [currentPage]);
 
   return (
     <EventContext.Provider
@@ -70,6 +81,7 @@ export const EventProvider = ({ children }: EventProviderProps) => {
         originalData: originalData,
         loading: loading,
         getSearch,
+        loadMoreItem,
       }}
     >
       {children}

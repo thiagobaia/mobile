@@ -3,7 +3,7 @@ import { Container, Image, Text } from "./styles";
 import { navigationRef } from "../../../RootNavigation";
 
 interface PropsLocals {
-  url: any;
+  url?: any;
   name: string;
   dataItem?: any;
   navigateString?: any;

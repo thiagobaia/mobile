@@ -8,9 +8,3 @@ export const Container = styled.View`
   flex: 1;
   background: ${theme.colors.shape};
 `;
-
-export const Title = styled.Text`
-  margin: 15px 0px 0;
-  font-size: 18px;
-  color: ${theme.colors.titlePrincipal};
-`;

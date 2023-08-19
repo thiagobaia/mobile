@@ -38,9 +38,9 @@ export const Weather = () => {
     }
   }
 
-  useEffect(() => {
-    getWeather();
-  }, [weather]);
+  // useEffect(() => {
+  //   getWeather();
+  // }, [weather]);
   return (
     <View>
       {loading ? (

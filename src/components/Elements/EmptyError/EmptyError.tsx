@@ -14,7 +14,7 @@ export function EmptyError({ componentName }: EmptyErrorModel) {
       </ErrorIcon>
 
       <Text>
-        Ops!, não encontramos {componentName} cadastrados ou tivemos algum
+        Ops!, {componentName} ou tivemos algum
         problema no servidor, tente mais tarde.
       </Text>
     </Container>

@@ -26,7 +26,6 @@ export const ListLocal: React.FC = () => {
 
   return (
     <Container>
-      <Title>Locais</Title>
       {loading ? (
         <Load />
       ) : (
