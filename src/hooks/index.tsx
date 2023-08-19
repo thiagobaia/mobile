@@ -4,6 +4,7 @@ import { EventProvider } from "./EventsContext";
 import { AttractionsProvider } from "./AttractionsContext";
 import { LocalProvider } from "./LocalContext";
 import { SponsorsProvider } from "./SponsorsContext";
+import { WeatherProvider } from "./WeatherContext";
 
 interface AppProviderProps {
   children: ReactNode;
@@ -14,7 +15,9 @@ export const AppProvider = ({ children }: AppProviderProps) => {
     <EventProvider>
       <AttractionsProvider>
         <LocalProvider>
-          <SponsorsProvider>{children}</SponsorsProvider>
+          <SponsorsProvider>
+            <WeatherProvider>{children}</WeatherProvider>
+          </SponsorsProvider>
         </LocalProvider>
       </AttractionsProvider>
     </EventProvider>
