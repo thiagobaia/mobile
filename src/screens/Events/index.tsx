@@ -7,11 +7,11 @@ import {
   Local,
   Photo,
   Tag,
-  Info,
   ContainerInfo,
   Maps,
   HeaderInfo,
 } from "./styles";
+
 import { Linking, Text, View } from "react-native";
 import { useRoute } from "@react-navigation/native";
 import { BackBtn } from "../../components/Elements/BackBtn/BackBtn";
@@ -41,9 +41,7 @@ export const Events = () => {
     <View style={{ backgroundColor: "white", flex: 1 }}>
       <Container showsVerticalScrollIndicator={false}>
         <Photo source={{ uri: `${process.env.API_URL}${image.url}` }} />
-
         <BackBtn color="white" text={"voltar"} />
-
         <View
           style={{
             backgroundColor: "white",
@@ -57,7 +55,6 @@ export const Events = () => {
             <Local>{name}</Local>
             <Tag>{category.name}</Tag>
           </HeaderInfo>
-
           <TextTitle>Descrição:</TextTitle>
           <ContainerContent>
             <ContentDescription>{description}</ContentDescription>

@@ -6,7 +6,7 @@ import {
   useContext,
 } from "react";
 
-import { apiWeather } from "../services/api";
+import { api } from "../services/api";
 
 interface IWeather {
   temp: string;
@@ -34,7 +34,7 @@ export const WeatherProvider = ({ children }: WeatherProviderProps) => {
 
   async function getWeather() {
     try {
-      const response = await apiWeather.get("/weathers");
+      const response = await api.get("/weathers");
       setWeatherData(response.data[response.data.length - 1]);
     } catch (error) {
       console.log(error);

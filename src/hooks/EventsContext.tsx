@@ -7,20 +7,8 @@ import {
 } from "react";
 
 import { api } from "../services/api";
+import { IEvent } from "../model/Events.model";
 
-interface IEvent {
-  id: number;
-  name: string;
-  place: string;
-  city: string;
-  date: Date;
-  description: string;
-  prohibited: string;
-  maps: string;
-  image: any;
-  outlets: string;
-  category: string;
-}
 
 interface EventProviderProps {
   children: ReactNode;

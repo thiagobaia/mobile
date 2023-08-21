@@ -5,19 +5,7 @@ import { SearchInput } from "../../Elements/SearchInput/SearchInput";
 import { EmptyError } from "../../Elements/EmptyError/EmptyError";
 import { CardLocalList } from "../../Elements/CardLocalList/CardLocalList";
 import { useEvent } from "../../../hooks/EventsContext";
-interface IEvent {
-  id: number;
-  name: string;
-  place: string;
-  city: string;
-  date: Date;
-  description: string;
-  prohibited: string;
-  maps: string;
-  image: any;
-  outlets: string;
-  category: string;
-}
+import { IEvent } from "../../../model/Events.model";
 
 export const ListEvents: React.FC = () => {
   const { events, loading, getSearch, loadMoreItem } = useEvent();
@@ -30,6 +18,7 @@ export const ListEvents: React.FC = () => {
       <FlashList
         numColumns={1}
         data={events}
+        keyExtractor={(item) => String(item.id)}
         showsVerticalScrollIndicator={false}
         ListEmptyComponent={
           <EmptyError componentName={"sua pesquisa não foi encontrada"} />
