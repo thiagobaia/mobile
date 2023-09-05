@@ -24,7 +24,7 @@ TucGo é o guia turístico definitivo da cidade de Tucurui-Pará ! Descubra os p
 # TucGo
 Aplicação completa do Guia Turistico da Cidade de Tucuruí.
 
-[Link Figma](https://www.figma.com/file/h3QaD3qpo2INaEkfqjY8Hh/Aplicativo-Guia-Tucuru%C3%AD?type=design&node-id=0-1&mode=design&t=KfpZ3SPooCja0wcD-0)
+- [Link Figma](https://www.figma.com/file/h3QaD3qpo2INaEkfqjY8Hh/Aplicativo-Guia-Tucuru%C3%AD?type=design&node-id=0-1&mode=design&t=KfpZ3SPooCja0wcD-0)
 
 ![App Screenshot](.github/cover.png)
 
