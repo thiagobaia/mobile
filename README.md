@@ -37,13 +37,10 @@ yarn expo start --clear
 ```
 ## Stack
 
-- React Native
-- Typescript
-- Storybook
-- Expo Bare Workflow
-- Cache Image
-- Offline first
-- Strapi as backend
+- [React Native](https://reactnative.dev/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Storybook](https://storybook.js.org/)
+- [Strapi as backend](https://strapi.io/) 
 
 
 
